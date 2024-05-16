@@ -1,0 +1,50 @@
+
+### find content
+GET http://localhost:8080/api/content
+
+### find content by id
+GET http://localhost:8080/api/content/
+
+### create content
+POST http://localhost:8080/api/content
+Content-Type: application/json
+
+{
+  "id": 2,
+  "title": "Hello",
+  "desc": "Article Description",
+  "status": "IDEA",
+  "contentType": "ARTICLE",
+  "dateCreated": "2024-05-14T18:12:18.89898",
+  "dateUpdated": null,
+  "url": "https://example.com"
+}
+
+### update content
+PUT http://localhost:8080/api/content/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "title": "Third Blog Post",
+  "desc": "Article Description",
+  "status": "IDEA",
+  "contentType": "ARTICLE",
+  "dateCreated": "2024-05-14T18:12:18.89898",
+  "dateUpdated": null,
+  "url": "https://example.com"
+}
+
+### delete content
+DELETE http://localhost:8080/api/content/1
+Content-Type: application/json
+
+### filter content by status
+GET http://localhost:8080/api/content/filter/status/IDEA
+
+### filter content by value
+GET http://localhost:8080/api/content/filter/GPT
+
+### filter content by type
+GET http://localhost:8080/api/content/filter/type/ARTICLE
+
